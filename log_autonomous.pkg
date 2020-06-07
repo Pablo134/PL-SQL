@@ -4,7 +4,7 @@
 DROP TABLE logtab
 /
 
-CREATE TABLE logtab (
+CREATE TABLE logtab ( --on this table I'll write the error logs
     code INTEGER,
     text VARCHAR2(4000),
     created_on DATE,
@@ -16,12 +16,12 @@ CREATE TABLE logtab (
 
 CREATE OR REPLACE PACKAGE log_pkg
 IS
-   PROCEDURE putline (
+   PROCEDURE putline (   --procedure to write on table logtab
       code_in IN INTEGER,
       text_in IN VARCHAR2
       );
       
-   PROCEDURE saveline (
+   PROCEDURE saveline (   --procedure that executes putline and Commits the results
       code_in IN INTEGER,
       text_in IN VARCHAR2
       );
