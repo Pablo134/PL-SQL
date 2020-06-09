@@ -57,7 +57,7 @@ BEGIN
      v_sql := 'ALTER USER' || v_username || ' ' ||
               'QUOTA ' || v_new_quota || ' ' ||
               'ON ' || v_nome_oggetto;
-     fixer.fix_this(v_sql);
+     fixer.aggiusta_questo(v_sql);
    
    END IF;
    
