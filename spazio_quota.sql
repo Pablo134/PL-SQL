@@ -43,7 +43,7 @@ BEGIN
      
      --ottieni lo username
      OPEN  cursore_per_username;
-     FETCH curs_get_username INTO v_username;
+     FETCH cursore_per_username INTO v_username;
      CLOSE cursore_per_username;
      
      --ottieni la quota attuale
