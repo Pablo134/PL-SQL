@@ -54,7 +54,7 @@ BEGIN
      --crea uno statement ALTER USER ed invialo a fixer job. Se lo proviamo qui 
      --partirà l'errore ORA-30511: invalid DDL operation in system trigger
      v_new_quota := v_old_quota + 40960;
-     v_sql := 'ALTER USER' || v_username || ' ' ||
+     v_sql := 'ALTER USER ' || v_username || ' ' ||
               'QUOTA ' || v_new_quota || ' ' ||
               'ON ' || v_nome_oggetto;
      fixer.aggiusta_questo(v_sql);
